@@ -1,7 +1,55 @@
 .banner {
-  margin-bottom: 22px;
-  background: linear-gradient(to bottom, #68b738, #f0f0f0);
+  // margin-bottom: 22px;
+  // background: linear-gradient(to bottom, #68b738, #f0f0f0);
   text-align: center;
   color: white;
-  // background-color: #68b738;
+  background-color: transparent;
+  box-sizing: border-box;
+  height: 505px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 22px 20px 22px;
+  position: relative;
+}
+
+.banner__background {
+  width: 320px;
+  height: 305px;
+  background-color: rgba(130, 200, 150, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    height: 850px;
+    width: auto;
+    color: black;
+    text-align: left;
+    padding: 60px 120px 60px 120px;
+  }
+
+  .banner__background {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    height: 550px;
+    width: auto;
+    position: static;
+    text-align: left;
+    padding: 110px 190px 110px 190px;
+  }
+
+  .banner__background {
+    background-color: rgba(130, 200, 130, 1);
+    right: 0px;
+    left: auto;
+    width: 720px;
+    height: 700px;
+  }
 }
