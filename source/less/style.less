@@ -1,25 +1,32 @@
 @import "page-header.less";
+@import "page-header__wrapper.less";
+@import "page-header__nav.less";
 @import "page-footer.less";
 @import "list-navigation__item.less";
+@import "list-navigation__link.less";
 @import "banner.less";
 @import "banner__title.less";
 @import "banner__text.less";
 @import "banner__button.less";
-@import "program.less";
+@import "programs.less";
 @import "program__title.less";
 @import "program__text.less";
 @import "program__link.less";
-@import "description__title.less";
+@import "description.less";
 @import "description__text.less";
 @import "example.less";
-@import "catalog__item.less";
-@import "catalog__title.less";
+@import "catalog.less";
 @import "copyright__text.less";
 @import "product__title.less";
 @import "product__button.less";
 @import "features__column.less";
 @import "more__title.less";
 @import "more__text.less";
+
+
+@grey: #f2f2f2;
+@tablet-width: 768px;
+@desktop-width: 1440px;
 
 .fs-lh(@pixel-fs; @pixel-lh) {
   font-size: ~"@{pixel-fs}px";
@@ -29,7 +36,7 @@
 .btn() {
   display: inline-block;
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   padding: 11px 25px 11px 25px;
   background-color: #68b738;
   text-align: center;
@@ -37,9 +44,22 @@
   color: white;
 }
 
+
+.grid-help() { //миксин для наглядности при построении сеток
+  outline: 1px red dotted;
+  background-color: rgba(250, 250, 250, 0.7);
+}
+
 body {
+  min-width: 320px;
+  margin: 0;
   background-color: white;
   font-family: "Oswald", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 p {
@@ -50,13 +70,30 @@ li {
   list-style: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3 {
   font-weight: normal;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

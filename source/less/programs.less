@@ -1,0 +1,29 @@
+.program {
+  margin: 20px auto;
+  background-color: @grey;
+  width: 320px;
+  height: 266px;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    width: 708px;
+    height: 372px;
+    margin: 30px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 110px;
+  }
+
+  .program {
+    width: 570px;
+    // height: 372px;
+    margin: 0;
+  }
+}
