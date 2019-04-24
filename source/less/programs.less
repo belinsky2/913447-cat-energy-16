@@ -1,16 +1,93 @@
 .program {
   margin: 20px auto;
   background-color: @grey;
-  width: 320px;
-  height: 266px;
+  width: 280px;
+  // height: 266px;
   box-sizing: border-box;
+  padding: 40px 20px 20px 20px;
+}
+
+.program__title {
+  .fs-lh(24; 37);
+  text-transform: uppercase;
+  padding-left: 70px;
+  // margin-top: 19px;
+  margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: @green;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    border-radius: 50%;
+  }
+}
+
+.program__text {
+  .fs-lh(14; 18);
+  margin-bottom: 25px;
+  // box-shadow: 0 9px 0 -8px red;
+}
+
+.program__link {
+  .fs-lh(16; 16);
+  // font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 240px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    opacity: 0.1;
+    background-color: black;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .program {
     width: 708px;
-    height: 372px;
+    // height: 372px;
     margin: 30px auto;
+    padding: 80px 285px 60px 50px;
+    position: relative;
+  }
+
+  .program__title {
+    .fs-lh(36; 37);
+    padding-left: 0;
+    margin-bottom: 30px;
+    position: static;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 90px;
+      left: auto;
+      right: 60px;
+    }
+  }
+
+  .program__text {
+    .fs-lh(16; 24);
+    margin-bottom: 60px;
+    // box-shadow: 0 9px 0 -8px red;
+  }
+
+  .program__link {
+    .fs-lh(20; 20);
+
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -18,12 +95,28 @@
   .programs {
     display: flex;
     justify-content: space-between;
-    padding: 80px 110px;
+    margin: 80px 110px;
   }
 
   .program {
     width: 570px;
     // height: 372px;
     margin: 0;
+    padding: 80px 50px 60px 50px;
+  }
+
+  .program__title {
+    .fs-lh(36; 37);
+    padding-left: 165px;
+    margin-bottom: 75px;
+    position: relative;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      left: 0;
+      right: auto;
+    }
   }
 }
