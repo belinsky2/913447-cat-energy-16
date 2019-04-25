@@ -3,53 +3,110 @@
   // background: linear-gradient(to bottom, #68b738, #f0f0f0);
   text-align: center;
   color: white;
-  background-color: transparent;
+  // background-color: gold;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
   box-sizing: border-box;
-  height: 505px;
+  // height: 505px;
   width: 320px;
   margin: 0 auto;
   padding: 30px 22px 20px 22px;
   position: relative;
 }
 
-.banner__background {
-  width: 320px;
-  height: 305px;
-  background-color: rgba(130, 200, 150, 1);
+.banner__title {
+  .fs-lh(36; 36);
+  margin-bottom: 25px;
+}
+
+.banner__text {
+  .fs-lh(14; 14);
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  // margin-bottom: 30px;
+}
+
+.banner__button {
+  .fs-lh(14; 18);
+  .btn();
+  margin-top: 300px;
+}
+
+.banner__image {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  bottom: 65px;
+  right: 20px;
+  width: 280px;
+  height: 270px;
+  // margin-bottom: 3px;
+  background-color: rgba(170, 80, 50, 0.35); // для наглядности
+  // margin-top: -400px;
 }
 
 @media (min-width: @tablet-width) {
   .banner {
-    height: 850px;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    // height: 850px;
+    width: 768px;
     color: black;
     text-align: left;
-    padding: 60px 120px 60px 120px;
+    padding: 60px 30px 0 30px;
+    background-image: none;
   }
 
-  .banner__background {
-    background-color: transparent;
+  .banner__wrapper {
+    padding: 0 120px;
+  }
+
+  .banner__title {
+    .fs-lh(60; 60);
+    margin-bottom: 35px;
+  }
+
+  .banner__text {
+    .fs-lh(20; 20);
+    margin-bottom: 50px;
+  }
+
+  .banner__button {
+    width: 245px;
+    margin: 0;
+  }
+
+  .banner__image {
+    position: static;
+    width: 709px;
+    height: 609px;
+    margin-top: -80px;
+    z-index: -1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner {
-    height: 550px;
-    width: auto;
+    // height: 550px;
+    flex-direction: row;
+    width: 1440px;
+    padding: 140px 190px 55px 190px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-top: -115px;
+    // z-index: 0;
     position: static;
-    text-align: left;
-    padding: 110px 190px 110px 190px;
   }
 
-  .banner__background {
-    background-color: rgba(130, 200, 130, 1);
-    right: 0;
-    left: auto;
-    width: 720px;
-    height: 700px;
+  .banner__wrapper {
+    width: 50%;
+    padding: 85px 100px 0 0;
+    z-index: 2;
+  }
+
+  .banner__image {
+    width: 552px;
+    height: 499px;
+    z-index: 1;
+    margin: 0 0 0 -250px;
   }
 }
