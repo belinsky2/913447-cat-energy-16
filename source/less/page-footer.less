@@ -8,8 +8,23 @@
   flex-direction: column;
 }
 
+.page-footer__logo {
+  margin: 35px auto;
+  position: relative;
+
+  &::before {
+    .under-line();
+  }
+}
+
 .page-footer__social {
   display: flex;
+  position: relative;
+  height: 60px;
+
+  &::before {
+    .under-line();
+  }
 }
 
 .page-footer__copyright {
@@ -24,6 +39,17 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 55px 30px;
+  }
+
+  .page-footer__logo {
+    margin: 0px;
+    position: static;
+  }
+
+  .page-footer__social {
+    display: flex;
+    position: static;
+    height: 60px;
   }
 }
 

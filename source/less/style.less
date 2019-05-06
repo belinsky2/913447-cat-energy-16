@@ -33,6 +33,17 @@
   background-color: rgba(250, 250, 250, 0.7);
 }
 
+.under-line() {
+  content: "";
+  height: 1px;
+  width: 240px;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  opacity: 0.1;
+  background-color: black;
+}
+
 .item-numbers(@num) when (@num > 0) {
   &:nth-child(@{num}) {
     &::after {
